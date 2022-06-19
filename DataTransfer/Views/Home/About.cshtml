@@ -1,0 +1,40 @@
+﻿
+@model HomeVM
+
+@{
+    ViewData["Title"] = "About"; /*DataTransfer-dataoturme*/
+ 
+}
+
+<h1>About</h1>
+
+<ul>
+    <li>@ViewBag.Name</li>
+    <li>@ViewData["Surname"]</li>
+    <li>@TempData["Age"]</li>
+
+</ul>
+<hr/>
+
+@*<ul>
+    @foreach (var item in ViewBag.Students)
+   {
+       <li>@item.Id @item.Name @item.Surname</li>
+   }
+    
+</ul>*@
+<ul>
+    @foreach (var item in Model.Students)
+   {
+       <li>@item.Name</li>  
+   }
+
+</ul>
+
+<ul>
+    @foreach (var item in Model.Groups)
+   {
+       <li>@item.grName</li>  
+   }
+
+</ul>
